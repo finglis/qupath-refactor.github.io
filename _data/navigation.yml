@@ -1,0 +1,8 @@
+# Navigation bar options
+# Not currently in use but keeping for future
+- name: Blog
+  link: /blog/
+- name: About
+  link: /about/
+- name: Contact
+  link: /contact/
