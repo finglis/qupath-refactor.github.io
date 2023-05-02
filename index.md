@@ -2,58 +2,76 @@
 layout: landing
 title: QuPath
 description: QuPath is cross-platform, user-friendly open source software for digital pathology and whole slide image analysis, written using JavaFX.  QuPath has also been designed to be developer-friendly, and combines an extensible design with powerful scripting tools.
-version: v0.4.3
 
 # News banner content
-banner: QuPath {{page.banner}} v0.4.3 is now available! #variable use within md to be debugged
+banner: QuPath version {{site.qupath_version}} is now available!
 
 #Hero content
 hero-heading: QuPath
 hero-subheading: Open Software for Bioimage Analysis
 
 #Downloads content
-windows-msi-file-size: 229 #This could be automated...see assets/js/file-size.js 
-windows-zip-file-size: 228 
-mac-intel-file-size: 220
-mac-silicon-file-size: 189
-linux-file-size: 213
+qupath_download_msi: https://github.com/qupath/qupath/releases/download/v{{ site.qupath_version }}/QuPath-{{ site.qupath_version }}-Windows.msi
+qupath_download_zip: https://github.com/qupath/qupath/releases/download/v{{ site.qupath_version }}/QuPath-{{ site.qupath_version }}-Windows.zip
+qupath_download_pkg: https://github.com/qupath/qupath/releases/download/v{{ site.qupath_version }}/QuPath-{{ site.qupath_version }}-Mac.pkg
+qupath_download_pkgs: https://github.com/qupath/qupath/releases/download/v{{ site.qupath_version }}/QuPath-{{ site.qupath_version }}-Mac-arm64.pkg
+qupath_download_tar: https://github.com/qupath/qupath/releases/download/v{{ site.qupath_version }}/QuPath-{{ site.qupath_version }}-Linux.tar.xz
 
-all-release-notes: Looking for another version? Find <a href="https://github.com/qupath/qupath/releases/" target=blank>all releases</a>
-install-troubleshooting: Trouble installing? Check out the <a href="https://qupath.readthedocs.io/en/stable/docs/intro/installation.html" target=blank>installation notes</a>
+#Download button text and aria labels
+download_button_default: Download QuPath
+download_button_win: Download for Windows
+download_button_mac: Download for Mac
+download_button_lin: Download for Linux
 
-download-link: https://github.com/qupath/qupath/releases/download/v0.4.3/QuPath-0.4.3- #EXAMPLE CONTENT
+download_dropdown_msi: Windows installer (msi)
+download_dropdown_zip: Windows portable (zip)
+download_dropdown_pkg: macOS Intel (pkg)
+download_dropdown_pkgs: macOS Apple silicon (pkg)
+download_dropdown_tar: Linux (tar.xz)
+
+download_dropdown_msi_aria: follow this link to download qupath for windows m s i 229 M B
+download_dropdown_zip_aria: follow this link to download qupath for windows Z I P 228 M B
+download_dropdown_pkg_aria: follow this link to download qupath for macOS p k g 220 M B
+download_dropdown_pkgs_aria: follow this link to download qupath for macOS p k g 189 M B
+download_dropdown_tar_aria: follow this link to download qupath for Linux t a r 213 M B
+
+latest_release_notes: Release notes v{{ site.qupath_version }}
+all_release_notes: Looking for another version? Find <a href="{{ site.qupath_releases }}" target=blank>all releases</a>
+install_troubleshooting: Trouble installing? Check out the <a href="{{ site.qupath_installation }}" target=blank>installation notes</a>
 
 #Slideshow content
 slide-1-title: Get started
-slide-1-content: See how QuPath can help visualize & analyze complex images with our step-by-step guides on <a href="https://qupath.readthedocs.io/en/stable/" target=blank>ReadTheDocs</a>.
+slide-1-content: See how QuPath can help visualize & analyze complex images with our step-by-step guides on <a href="{{ site.qupath_documentation }}" target=blank>ReadTheDocs</a>.
+slide-1-img: /assets/images/slideshow/qupath-getting-started.png
 slide-2-title: Learn more
-slide-2-content: Dive deeper into what QuPath can do by checking out the tutorials & workshops on <a href="https://www.youtube.com/c/qupath" target=blank>YouTube</a>.
+slide-2-content: Dive deeper into what QuPath can do by checking out the tutorials & workshops on <a href="{{ site.qupath_youtube }}" target=blank>YouTube</a>.
+slide-2-img: /assets/images/slideshow/qupath-youtube.png
 slide-3-title: Annotate faster
 slide-3-content: QuPath has lots of tricks to annotate images quickly. See them in action in this <a href="https://twitter.com/petebankhead/status/1295965136646176768?s=20 t=ETG2R8JKrhtT-kSZdW-Cnw" target=blank >annotation tweetorial</a>.
+slide-3-img: /assets/images/slideshow/annotation-snapping.jpg
 slide-4-title: Understand images
 slide-4-content: Learn the core ideas behind analyzing images from QuPath’s creator, in the new interactive handbook <a href="https://bioimagebook.github.io/README.html" target=blank>Introduction to Bioimage Analysis</a>.
+slide-4-img: /assets/images/slideshow/pete-teaching.png
 slide-5-title: Latest release
-slide-5-content: Latest release slide-5-content:QuPath 0.4.3 is here! <br> Check out <a href="https://github.com/qupath/qupath/releases/"target=blank>releases</a> to find out more.
+slide-5-content: Latest release slide-5-content:QuPath 0.4.3 is here! <br> Check out <a href="{{ site.qupath_releases }}"target=blank>releases</a> to find out more.
+slide-5-img: /assets/images/slideshow/qupath-jobs.png
 
 #Three Icons content
+#to change link variable, go to html file
 icon-1-title: Docs
-icon-1-content: Find QuPath step-by-step guides, video tutorials and more on <a href="https://qupath.readthedocs.io/en/stable/" target=blank>ReadTheDocs</a>
+icon-1-content: Find QuPath step-by-step guides, video tutorials and more on <a href="{{ site.qupath_documentation }}" target=blank>ReadTheDocs</a>
+icon-1-aria: follow this link to learn more about qupath
 icon-2-title: Discuss
-icon-2-content: Join other QuPath users and search thousands of discussions on <a href="https://forum.image.sc/tag/qupath" target=blank>image.sc</a>
+icon-2-content: Join other QuPath users and search thousands of discussions on <a href="{{ site.qupath_forum }}" target=blank>image.sc</a>
+icon-2-aria: follow this link to access discussons on the image.sc forum
 icon-3-title: Develop
-icon-3-content: Check out QuPath's source code on <a href="https://github.com/qupath/qupath" target=blank>GitHub</a> or view the <a href="https://qupath.github.io/javadoc/docs/" target=blank>Javadocs</a>
+icon-3-content: Check out QuPath's source code on <a href="{{ site.qupath_github }}" target=blank>GitHub</a> or view the <a href="{{ site.qupath_java_docs }}" target=blank>Javadocs</a>
+icon-3-aria: follow this link to the qupath github code base
 
 #Footer content
-footer-1: To reference QuPath in scientific publications, see <a href="https://qupath.readthedocs.io/en/stable/docs/intro/citing.html" target="_blank">'How to cite QuPath'</a>
-footer-2: QuPath is open source software, licensed under the <a href="https://github.com/qupath/qupath/blob/main/LICENSE.txt" target="_blank">GNU General Public License</a>
+footer-1: To reference QuPath in scientific publications, see <a href="{{ site.qupath_citation }}" target="_blank">'How to cite QuPath'</a>
+footer-2: QuPath is open source software, licensed under the <a href="{{ site.qupath_license }}" target="_blank">GNU General Public License</a>
+twitter_aria: follow this link to the qupath github twitter account
+github_aria: follow this link to the qupath github code base
+
 ---
-
-## About
-
-This is the basic content section
-
-## Features
-
-- with
-- lots
-- of content

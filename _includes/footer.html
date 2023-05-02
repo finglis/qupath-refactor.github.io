@@ -1,14 +1,13 @@
 <!-- Footer component -->
 <footer>
-    <p class="footer-text">{{page.footer-1}}
-    <p class="footer-text">{{page.footer-2}}
+    <p class="footer-text">{{page.footer-1 | liquify }}
+    <p class="footer-text">{{page.footer-2 | liquify }}
     </p>
     <hr>
     </hr>
-    <a href="https://github.com/qupath/qupath" target=blank
-        aria-label="follow this link to the qupath github code base"><i class="fa-brands fa-github fa-2x"></i></a>
-    <a href="https://twitter.com/qupath" target=blank
-        aria-label="follow this link to the qupath github twitter account"><i
+    <a href="{{ site.qupath_github  | liquify }}" target=blank aria-label="{{ page.github_aria }}"><i
+            class="fa-brands fa-github fa-2x"></i></a>
+    <a href="{{ site.qupath_twitter  | liquify }}" target=blank aria-label="{{ page.twitter_aria }}"><i
             class="fa-brands fa-twitter fa-2x"></i></a>
 </footer>
 

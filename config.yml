@@ -1,9 +1,0 @@
-title: My Landing Page
-description: QuPath is cross-platform, user-friendly open source software for digital pathology and whole slide image analysis, written using JavaFX.  QuPath has also been designed to be developer-friendly, and combines an extensible design with powerful scripting tools.
-
-baseurl:
-url: "qupath.github.io"
-
-theme: my-landing-page-theme
-
-permalink: pretty
