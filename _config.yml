@@ -25,3 +25,17 @@ qupath_youtube: https://www.youtube.com/c/qupath
 # Not currently required
 # repository: qupath/qupath.github.io
 # baseurl:
+
+#tbc
+collections:
+  slides:
+    _hide_content: true
+    # _icon: account_circle
+# defaults:
+#   -
+#   # scope:
+#   # path: ""
+#   type: "slides"
+#   values:
+#   _options:
+#   image_path:

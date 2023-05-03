@@ -1,51 +1,18 @@
 <!-- Slideshow component -->
 <div class="slideshow-container standard-component">
     <!-- Full-width images with number and caption text -->
+    {% for slide in site.slides %}
     <div class="mySlides fade">
         <div class="slide">
             <div class="slide-text">
-                <h2>{{page.slide-1-title | liquify }}</h2>
-                <p> {{page.slide-1-content | liquify }}</p>
+                <h2>{{slide.slide-title | liquify }}</h2>
+                <p> {{slide.slide-content | liquify }}</p>
             </div>
-            <img src="{{ page.slide-1-img }}" class="screenshot-img" alt="">
+            <img src="{{ slide.slide-img }}" class="{{ slide.slide-img-class }}" alt="">
         </div>
     </div>
-    <div class="mySlides fade">
-        <div class="slide">
-            <div class="slide-text inverse-text">
-                <h2>{{page.slide-2-title | liquify }}</h2>
-                <p> {{page.slide-2-content | liquify }}</p>
-            </div>
-            <img src="{{ page.slide-2-img }}" class="inverse screenshot-img" alt="">
-        </div>
-    </div>
-    <div class="mySlides fade">
-        <div class="slide">
-            <div class="slide-text">
-                <h2>{{page.slide-3-title | liquify }}</h2>
-                <p> {{page.slide-3-content | liquify }}</p>
-            </div>
-            <img src="{{ page.slide-3-img }}" class="screenshot-img" alt="">
-        </div>
-    </div>
-    <div class="mySlides fade">
-        <div class="slide">
-            <div class="slide-text inverse-text">
-                <h2>{{page.slide-4-title | liquify }}</h2>
-                <p> {{page.slide-4-content | liquify }}</p>
-            </div>
-            <img src="{{ page.slide-4-img }}" class="inverse center-img" alt="">
-        </div>
-    </div>
-    <div class="mySlides fade">
-        <div class="slide">
-            <div class="slide-text">
-                <h2>{{page.slide-5-title | liquify }}</h2>
-                <p> {{page.slide-5-content | liquify }}</p>
-            </div>
-            <img src="{{ page.slide-5-img }}" class="center-img" alt="">
-        </div>
-    </div>
+    {% endfor %}
+
     <!-- Next and previous buttons -->
     <a class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-angle-left"></i></a>
     <a class="next" onclick="plusSlides(1)"><i class="fa-solid fa-angle-right"></i></a>

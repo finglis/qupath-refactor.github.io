@@ -1,16 +1,5 @@
-# Storage of the footer links
-# Not currently in use but keeping for future
-# This data is used by the footer.html file within _includes
-center_links:
-  - name:
-    link: https://twitter.com/qupath
-    social_icon: Twitter
-    new_window: true
-  - name:
-    link: https://github.com/qupath/qupath
-    social_icon: Github
-    new_window: true
-  - name:
-    link: https://www.youtube.com/c/qupath
-    social_icon: YouTube
-    new_window: true
+#Footer content
+footer-1: To reference QuPath in scientific publications, see <a href="{{ site.qupath_citation }}" target="_blank">'How to cite QuPath'</a>
+footer-2: QuPath is open source software, licensed under the <a href="{{ site.qupath_license }}" target="_blank">GNU General Public License</a>
+twitter_aria: follow this link to the qupath github twitter account
+github_aria: follow this link to the qupath github code base
